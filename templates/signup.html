@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>Sign up</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            background: linear-gradient(-45deg, #f3e5f5, #e73c7e, #23a6d5, #00FFFF);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        #header {
+            padding: 10;
+        }
+
+        .center {
+            margin: auto;
+            width: 60%;
+            padding: 10px;
+        }
+
+        img {
+            max-width: 200px;
+            max-height: 200px;
+            vertical-align: text-top;
+            box-align: right;
+            text-align: right;
+        }
+
+        .cell {
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Sign up!</h1>
+    <form method="POST" action="/signup">
+        <input class="input is-large" type="text" name="username" placeholder="Your Username" autofocus="">
+        <input type="submit" value="Submit">
+    </form>
+    <a href={{ url_for('login') }}>Log In</a>
+</body>
+
+</html>
